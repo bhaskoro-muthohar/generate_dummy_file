@@ -5,7 +5,7 @@ import datetime
 def datagenerate(records, headers):
     fake = Faker('en_US')
     fake1 = Faker('en_GB')   # Generate No Hp
-    with open("People_data.csv", 'wt') as csvFile:
+    with open("100.csv", 'wt') as csvFile:
         writer = csv.DictWriter(csvFile, fieldnames=headers)
         writer.writeheader()
         for i in range(records):
@@ -35,7 +35,7 @@ def datagenerate(records, headers):
                     })
     
 if __name__ == '__main__':
-    records = 100000
+    records = 100
     headers = ["Email Id", "Prefix", "Name", "Birth Date", "Phone Number", "Additional Email Id",
                "Address", "Zip Code", "City","State", "Country", "Year", "Time", "Link", "Text"]
     datagenerate(records, headers)
